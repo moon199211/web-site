@@ -6,6 +6,7 @@ import { systemName, PName, navList } from 'utils/config'
 import './index.less'
 
 const { Header } = Layout;
+const SubMenu = Menu.SubMenu;
 
 class Head extends Component {
   static contextTypes = {
@@ -54,12 +55,23 @@ class Head extends Component {
         className='header-menu-antd'
       >
       {navList.map((item, i) => {
-        return <Menu.Item key={item.key}>
-          <Link to={item.href}>{item.name}</Link> 
-        </Menu.Item>
+        if(item.children && item.children.length) {
+          return <SubMenu key={item.key} title={<Link to={item.href}>{item.name}</Link> }>
+            {item.children.map((list, n) => {
+                return <Menu.Item key={list.key}>
+                  <Link to={list.href}>{list.name}</Link> 
+                </Menu.Item>
+            })}
+          </SubMenu>
+        }
+        else {
+          return <Menu.Item key={item.key}>
+            <Link to={item.href}>{item.name}</Link> 
+          </Menu.Item>
+        }
       })}
     </Menu>
-  }
+  } 
 
   render() {
     const { menuVisible } = this.state;

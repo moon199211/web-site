@@ -2,7 +2,7 @@
  * antd theme config
  */
 
-const default_color = '#4285f4'
+const default_color = '#108ee9'
 
 module.exports = () => {
   return {

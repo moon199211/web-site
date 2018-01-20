@@ -1,3 +1,117 @@
-.wj-home{
+@import '~utils/style/variables.less';
 
+.wj-home{
+  .wj-home-carousel {
+    .ant-carousel .slick-slide {
+      height: 500px;
+      background: @default-layout-color;
+      overflow: hidden;
+    }
+    .ant-carousel .slick-slide {
+      color: #fff;
+    }
+    .carousel-list {
+      height: 100%;
+      color: #fff;
+      position: relative;
+    }
+    .carousel-bg-1 {
+      background: url('~public/home/banner1.png') left center no-repeat;
+      background-size: cover;
+    }
+    .carousel-bg-2 {
+      background: url('~public/home/banner2.png') left center no-repeat;
+      background-size: cover;
+    }
+    .carousel-bg-3 {
+      background: url('~public/home/banner3.png') left center no-repeat;
+      background-size: cover;
+    }
+    .carousel-bg-4 {
+      background: url('~public/home/banner4.png') left center no-repeat;
+      background-size: cover;
+    }
+    .carousel-text {
+      position: absolute;
+      z-index: 99;
+      h2{
+        font-size: 30px;
+        color: #fff;
+      }
+    }
+    .carousel-text-left {
+      top: 100px;
+      left: 30%;
+    }
+    .carousel-text-top {
+      top: 2px;
+      left: 45%;
+    }
+    .carousel-text-ul {
+      width: 400px;
+      li {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding-left: 24px;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0px;
+          top: 7px;
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-radius: 5px;
+          background-color: @warn-color;
+        }
+      }
+    }
+  }
+  .wj-home-products {
+    padding: 16px 16px 50px;
+    background: #f4f5f5;
+    .home-products-tag {
+      .home-products-tag-box {
+        border: 1px solid #ccc;
+        height: 380px;
+        overflow:hidden; 
+      }
+    }
+  }
+  .wj-home-data {
+    position: relative;
+    height: 730px;
+    background: url('~public/home/data-adv.png') left center no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 16px;
+    .wj-home-data-avg-info {
+      width: 60%;
+      margin: 30px auto;
+      font-size: 18px;
+    }
+    .wj-home-data-avg-list {
+      position: absolute;
+      top: 340px;
+      right: 10%;
+      z-index: 99;
+      li {
+        position: relative;
+        margin-bottom: 30px;
+        padding-left: 30px;
+        font-size: 14px;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0px;
+          top: 4px;
+          display: block;
+          width: 18px;
+          height: 18px;
+          background: url('~public/home/sanjiao.png') left center no-repeat;
+        }
+      }
+    }
+  }
 }
