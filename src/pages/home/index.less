@@ -2,69 +2,24 @@
 
 .wj-home{
   .wj-home-carousel {
+    user-select: none;
     .ant-carousel .slick-slide {
-      height: 500px;
       background: @default-layout-color;
       overflow: hidden;
+      height: auto;
     }
     .ant-carousel .slick-slide {
       color: #fff;
     }
     .carousel-list {
-      height: 100%;
       color: #fff;
       position: relative;
-    }
-    .carousel-bg-1 {
-      background: url('~public/home/banner1.png') left center no-repeat;
-      background-size: cover;
-    }
-    .carousel-bg-2 {
-      background: url('~public/home/banner2.png') left center no-repeat;
-      background-size: cover;
-    }
-    .carousel-bg-3 {
-      background: url('~public/home/banner3.png') left center no-repeat;
-      background-size: cover;
-    }
-    .carousel-bg-4 {
-      background: url('~public/home/banner4.png') left center no-repeat;
-      background-size: cover;
-    }
-    .carousel-text {
-      position: absolute;
-      z-index: 99;
-      h2{
-        font-size: 30px;
-        color: #fff;
-      }
-    }
-    .carousel-text-left {
-      top: 100px;
-      left: 30%;
-    }
-    .carousel-text-top {
-      top: 2px;
-      left: 45%;
-    }
-    .carousel-text-ul {
-      width: 400px;
-      li {
-        position: relative;
-        float: left;
-        width: 50%;
-        padding-left: 24px;
-        &:after {
-          content: '';
-          position: absolute;
-          left: 0px;
-          top: 7px;
-          display: block;
-          width: 10px;
-          height: 10px;
-          border-radius: 5px;
-          background-color: @warn-color;
-        }
+      img {
+        border: 0;
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
       }
     }
   }
@@ -72,45 +27,149 @@
     padding: 16px 16px 50px;
     background: #f4f5f5;
     .home-products-tag {
+      width: 80%;
+      margin: 0 auto;
+      .ant-row {
+        > div {
+          position: relative;
+          height: 380px;
+          margin: 16px 0;
+          &:hover {
+            .home-products-tag-box {
+              top: -5%;
+              left: -2%;
+              width: 104%;
+              height: 110%;
+              border: 1px solid @default-color;
+              .home-init-tag {
+                display: none;
+              }
+              .home-hover-tag {
+                display: block;
+              }
+            }
+          }
+        }
+      }     
       .home-products-tag-box {
+        position: absolute;
+        top: 0;
+        left: 5%;
+        z-index: 99;
         border: 1px solid #ccc;
-        height: 380px;
-        overflow:hidden; 
+        border-radius: 6px;
+        background-color: #fff;
+        width: 88%;
+        height: 100%;
+        overflow:hidden;
+        transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        h3 {
+          text-align: center;
+        }
+        .home-init-tag {
+          width: 100%;
+          height: 100%;
+          display: block;
+          .init-top {
+            height: 260px;         
+            background-color: #ecf6fd;
+            .init-top-content {
+              height: 100%;
+              padding: 200px 18px 0;
+              text-align: center;
+            }
+          }
+          .tag-1 {
+            background: url('~public/home/tag-1.png') center 45px no-repeat;
+          }
+          .tag-2 {
+            background: url('~public/home/tag-2.png') center 45px no-repeat;
+          }
+          .tag-3 {
+            background: url('~public/home/tag-3.png') center 45px no-repeat;
+          }
+          .init-footer {
+            height: 120px;
+            padding: 20px 42px;
+            background-color: #fff;
+            > li {
+              margin: 8px;
+            }
+          }
+        }
+        .home-hover-tag {
+          width: 100%;
+          height: 100%;
+          display: none;
+          .hover-top {
+            position: relative;
+            height: 33%;
+            background-color: @default-color;
+            h3{color: #fff;}
+            .hover-top-center {
+              width: 50%;
+              height: 100px;
+              padding-top: 56px;
+              margin: auto;
+              position: absolute;
+              top: 50%; left: 50%;
+              -webkit-transform: translate(-50%,-50%);
+              -ms-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+            }
+          }
+          .tag-1 {
+            background: url('~public/home/tag-1-fff.png') center top no-repeat;
+            background-size: 55px 55px;
+          }
+          .tag-2 {
+            background: url('~public/home/tag-2-fff.png') center top no-repeat;
+            background-size: 55px 55px;
+          }
+          .tag-3 {
+            background: url('~public/home/tag-3-fff.png') center top no-repeat;
+            background-size: 55px 55px;
+          }
+          .hover-footer {
+            height: 77%;
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 25px;
+            .article-box {
+              width: 320px;
+              margin: 0 auto;
+            }
+          }
+        }
       }
     }
   }
   .wj-home-data {
-    position: relative;
-    height: 730px;
-    background: url('~public/home/data-adv.png') left center no-repeat;
-    background-size: cover;
-    color: #fff;
-    padding: 16px;
-    .wj-home-data-avg-info {
-      width: 60%;
-      margin: 30px auto;
-      font-size: 18px;
+    img {
+      border: 0;
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
     }
-    .wj-home-data-avg-list {
-      position: absolute;
-      top: 340px;
-      right: 10%;
-      z-index: 99;
-      li {
-        position: relative;
-        margin-bottom: 30px;
-        padding-left: 30px;
-        font-size: 14px;
-        &:after {
-          content: '';
-          position: absolute;
-          left: 0px;
-          top: 4px;
-          display: block;
-          width: 18px;
-          height: 18px;
-          background: url('~public/home/sanjiao.png') left center no-repeat;
+  }
+
+  .wj-home-partner {
+    margin-bottom: 100px;
+    .partner-logo {
+      margin-top: 50px;
+      text-align: center;
+      .partner-logo-box {
+        padding: 8px;
+        &:hover {
+          background: #ecf6fd;
         }
+      }
+      img {
+        border: none;
+        vertical-align: middle;
+        height: 60px;
+        max-width: 100%;
       }
     }
   }

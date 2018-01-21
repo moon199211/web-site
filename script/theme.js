@@ -9,8 +9,9 @@ module.exports = () => {
     'primary-color': default_color,
     'link-color': default_color,
     'border-radius-base': '3px',    
-    'menu-collapsed-width': '70px'
-  };
+    'menu-collapsed-width': '70px',
+    'font-size-base': '14px',
+  }; 
 };
 
 // const fs = require('fs')

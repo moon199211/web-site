@@ -12,7 +12,7 @@ class Head extends Component {
   static contextTypes = {
     isMobile: PropTypes.bool.isRequired,
   }
-
+ 
   constructor() {
     super()
 
@@ -80,7 +80,7 @@ class Head extends Component {
 
     const module = location.pathname.replace(/(^\/|\/$)/g, '').split('/').slice(-1).join('');
     let activeMenuItem = module || 'home';
-    console.log(activeMenuItem)
+    // console.log(activeMenuItem)
     const menuMode = isMobile ? 'inline' : 'horizontal';
 
     const headNav = this.renderNav(menuMode, activeMenuItem);

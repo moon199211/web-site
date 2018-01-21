@@ -1,17 +1,23 @@
 .wj-products {
   .wj-top-bg {
-    height: 300px;
-    overflow: hidden;
-    background: url('~public/products/banner.png') left center no-repeat;
-    background-size: 100% 100%;
+    img {
+      border: none;
+      vertical-align: middle;
+      max-width: 100%;
+      width: 100%;
+    }
   }
   .wj-products-content {
-    min-height: 500px;
     position: relative;
+    min-height: 500px;
+    padding: 50px 0;
     .wj-products-nav {
       position: absolute;
       top: 0;
-      left: 20%;
+      left: 15%;
+      > i {
+        font-size: 28px;
+      }
     }
   }
 }

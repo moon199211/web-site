@@ -16,8 +16,7 @@ var paths = require('./script/paths');
 
 var prodConfig = merge(baseWebpackConfig, {
   entry: {
-    vendor: ['react', 'react-dom', 'mockjs'],
-    charts: ['echarts']
+    vendor: ['react', 'react-dom']
   },
   devtool: false,
 	plugins: [
@@ -49,7 +48,7 @@ var prodConfig = merge(baseWebpackConfig, {
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor', 'charts'],
+      name: ['vendor'],
       minChunks: Infinity,
     }),
     new webpack.optimize.CommonsChunkPlugin({

@@ -18,26 +18,19 @@
 	  font-size: 187.5% !important;
 	}
   }
-.body{
-    padding: 0;
-    margin: 0;
-}
-.wj-about {
-  
-}
 
 .wj-banner{
-    // display: inline-block;
-    max-height: 300px;
-    height: calc(100vw * 0.15625);
-    max-width: 100%;
-    background: url('~public/about/aboutusbanner.png') no-repeat center;
-    background-size: 100% 100%;
+    img {
+        border: none;
+        vertical-align: middle;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 .wj-we{
-    padding:2.036rem 2.222rem 0;
+    width: 80%;
+    margin: 30px auto;
     text-align: center;
-
 }
 .wj-we h3{
     color: #333;
@@ -45,13 +38,6 @@
     font-weight: 400;
     font-size: 0.962rem;
     margin: 0 !important;
-}
-.wj-we span{
-    font-style: normal;
-    font-size: 0.444rem;
-    color: #333;
-    margin-bottom: 0.444rem;
-    display: block;
 }
 
 .wj-we p{
@@ -126,89 +112,33 @@
 }
 
 .wj-callMeDiv{
-    padding: 0 2.295rem 1.066rem;
-}
+    padding: 0 50px 50px;
+  
+  .wj-about-adress {
+    width: 80%;
+    margin: 40px auto;
+    @media (max-width: 670px) {
+      width: 96%;
+    }
+    .ant-row {
+      > div {
+        margin-bottom: 80px;
+      }
+    }
+    .adress-list-ul {
+      padding: 16px 30px;
+      > li {
+        padding: 8px;
+      }
+    }
 
-.wj-callMeDiv h3{
-    font-size: 0.961rem;
-    color: #333;
-    text-align: center;
-    font-weight: 400;
-    margin: 0.4rem 0 0.4rem !important;
-}
-.wj-callMeDiv i{
-    font-size: 0.444rem;
-
-
-    color: #333;
-
-    font-style: normal;
-
-    text-align: center;
-
-    display: block;
-}
-.wj-callMeDiv .wj-beijingDiv{
-    margin-top: 1.851rem;
-}
-
-.wj-callMeDiv .wj-beijingDiv .wj-beijingLeft{
-    width: 29%;
-    float: left;
-    position: relative;
-    padding-top: 2.407rem; 
-
-}
-.wj-callMeDiv .wj-beijingDiv  .wj-beijingLeft h5{
-    color: #333;
-    margin: 0 0 0.74rem !important;
-    font-size: 0.667rem;
-    font-weight: 400;
-}
-.wj-callMeDiv .wj-beijingDiv  .wj-beijingLeft p{
-    color: #333;
-    line-height: 1.111rem;
-    font-size: 0.444rem;
-}
-
-.wj-callMeDiv .wj-beijingDiv .wj-beijingRight{
-    width: 69%;
-    float: right;
-}
-
-.wj-callMeDiv .wj-shanghaiDiv{
-    margin-top: 1.851rem;
-}
-.wj-callMeDiv img{
-    position: absolute;
-    left: -1rem;
-    top: 2.44rem;
-}
-.wj-callMeDiv .wj-shanghaiDiv .wj-shanghaiLeft{
-    width: 29%;
-    float: left;
-    position: relative;
-    padding-top: 2.407rem;
-
-}
-.wj-callMeDiv .wj-shanghaiDiv  .wj-shanghaiLeft h5{
-    color: #333;
-    margin: 0 0 0.74rem !important;
-    font-size: 0.667rem;
-    font-weight: 400;
-    
-}
-.wj-callMeDiv .wj-shanghaiDiv  .wj-shanghaiLeft p{
-    color: #333;
-    line-height: 1.111rem;
-    font-size: 0.444rem;
-    
-}
-
-.wj-callMeDiv .wj-shanghaiDiv .wj-shanghaiRight{
-    width: 69%;
-    float: right;
-}
-.wj-clear{
-    clear:both;
+    .adress-map {
+      height: 300px;
+      border: 1px solid rgba(0,0,0,.2);
+      &:hover {
+        box-shadow: 2px 3px 6px rgba(0,0,0,.2);
+        border-color: transparent;
+      }
+    }
+  }
 }

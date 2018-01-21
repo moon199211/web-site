@@ -1,0 +1,63 @@
+.wj-float-people {
+    .wj-float-functions-title {
+      font-size: 24px;
+    }
+    .wj-float-functions {
+      width: 60%;
+      margin: 32px auto;
+      @media (max-width: 670px) {
+        width: 90%;
+      }
+      .wj-float-functions-list {
+        margin-top: 50px;
+      }
+    }
+    .wj-float-ways {
+      height: 520px;
+      background: url('~public/solutions/poors/agboxTwoBg.png') center no-repeat;
+      background-size: 100% 100%;
+      padding: 30px 0;
+      .ways-list {
+        text-align: center;
+        p{
+            margin: 50px 0 32px;
+            
+        }
+        img {
+          max-width: 100%;
+          border: none;
+        }
+      }
+    }
+  
+    .wj-float-methods {
+      width: 80%;
+      margin: 32px auto;
+      text-align: center;
+      .ant-row {
+        > div {
+          height: 145px;
+          line-height: 145px;
+          font-size: 20px;
+          font-weight: 600;
+          img {
+            vertical-align: middle;
+            margin-right: 16px;
+          }
+          &:hover {
+            img {
+              animation:imgHover 1s linear 2;
+            }          
+          }
+        }
+      }
+    }
+  }
+  
+@keyframes imgHover
+{
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(-10deg);}
+    75%{transform:rotate(10deg);}
+    100%{transform:rotate(0deg);}
+}
